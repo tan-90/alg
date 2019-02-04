@@ -1,0 +1,167 @@
+{
+	"name": "alg",
+	"displayName": "alg",
+	"description": "An org mode inspired organizer and writing format.",
+	"author": {
+		"name": "tan90",
+		"email": "tan-90@outlook.com",
+		"url": "https://github.com/tan-90"
+	},
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.30.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onLanguage:alg"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "alg.promoteHeading",
+				"title": "alg: Promote Heading"
+			},
+			{
+				"command": "alg.demoteHeading",
+				"title": "alg: Demote Heading"
+			},
+			{
+				"command": "alg.nextHeading",
+				"title": "alg: Next Heading"
+			},
+			{
+				"command": "alg.previousHeading",
+				"title": "alg: Previous Heading"
+			},
+			{
+				"command": "alg.nextSameLevelHeading",
+				"title": "alg: Next Same Level Heading"
+			},
+			{
+				"command": "alg.previousSameLevelHeading",
+				"title": "alg: Previous Same Level Heading"
+			},
+			{
+				"command": "alg.backHigherLevelHeading",
+				"title": "alg: Back to Higher Level Heading"
+			},
+			{
+				"command": "alg.promoteCurrentSubtree",
+				"title": "alg: Promote Current Subtree"
+			},
+			{
+				"command": "alg.demoteCurrentSubtree",
+				"title": "alg: Demote Current Subtree"
+			},
+			{
+				"command": "alg.insertNewHeading",
+				"title": "alg: Insert New Heading"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "alg.promoteHeading",
+				"key": "alt+left",
+				"when": "editorLangId == alg"
+			},
+			{
+				"command": "alg.demoteHeading",
+				"key": "alt+right",
+				"when": "editorLangId == alg"
+			},
+			{
+				"command": "alg.nextHeading",
+				"key": "alt+down",
+				"when": "editorLangId == alg"
+			},
+			{
+				"command": "alg.previousHeading",
+				"key": "alt+up",
+				"when": "editorLangId == alg"
+			},
+			{
+				"command": "alg.nextSameLevelHeading",
+				"key": "ctrl+alt+down",
+				"when": "editorLangId == alg"
+			},
+			{
+				"command": "alg.previousSameLevelHeading",
+				"key": "ctrl+alt+up",
+				"when": "editorLangId == alg"
+			},
+			{
+				"command": "alg.backHigherLevelHeading",
+				"key": "ctrl+up",
+				"when": "editorLangId == alg"
+			},
+			{
+				"command": "alg.promoteCurrentSubtree",
+				"key": "shift+left",
+				"when": "editorLangId == alg"
+			},
+			{
+				"command": "alg.demoteCurrentSubtree",
+				"key": "shift+right",
+				"when": "editorLangId == alg"
+			},
+			{
+				"command": "alg.insertNewHeading",
+				"key": "shift+enter",
+				"when": "editorLangId == alg"
+			}
+		],
+		"languages": [
+            {
+                "id": "alg",
+                "aliases": [
+                    "alg",
+                    "alg mode"
+                ],
+                "extensions": [
+                    ".alg"
+                ]
+            }
+		],
+		"grammars": [
+			{
+				"language": "alg",
+				"scopeName": "source.alg",
+				"path": "./syntaxes/alg.tmLanguage.json"
+			}
+		],
+		"viewsContainers": {
+            "activitybar": [
+                {
+                    "id": "alg-organizer",
+                    "title": "alg",
+                    "icon": "./resources/dark/logo.png"
+                }
+            ]
+		},
+		"views": {
+			"alg-organizer": [
+				{
+					"id": "todos",
+					"name": "TODO"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^3.1.4",
+		"vscode": "^1.1.25",
+		"tslint": "^5.8.0",
+		"@types/node": "^8.10.25",
+		"@types/mocha": "^2.2.42"
+	}
+}

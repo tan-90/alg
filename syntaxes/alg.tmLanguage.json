@@ -1,0 +1,97 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "alg",
+    "patterns": [
+        {
+            "include": "#heading"
+        }
+    ],
+    "repository": {
+        "heading": {
+            "match": "^([#]{1,6}\\s+.*)$",
+            "name": "markup.heading.alg",
+            "captures": {
+                "1": {
+                    "patterns": [
+                        {
+                            "match": "([#]{6})\\s+(.*)",
+                            "name": "heading.6.alg",
+                            "captures": {
+                                "1": {
+                                    "name": "punctuation.definition.heading.alg"
+                                },
+                                "2": {
+                                    "name": "entity.name.section.alg"
+                                }
+                            }
+                        },
+                        {
+                            "match": "([#]{5})\\s+(.*)",
+                            "name": "heading.5.alg",
+                            "captures": {
+                                "1": {
+                                    "name": "punctuation.definition.heading.alg"
+                                },
+                                "2": {
+                                    "name": "entity.name.section.alg"
+                                }
+                            }
+                        },
+                        {
+                            "match": "([#]{4})\\s+(.*)",
+                            "name": "heading.4.alg",
+                            "captures": {
+                                "1": {
+                                    "name": "punctuation.definition.heading.alg"
+                                },
+                                "2": {
+                                    "name": "entity.name.section.alg"
+                                }
+                            }
+                        },
+                        {
+                            "match": "([#]{3})\\s+(.*)",
+                            "name": "heading.3.alg",
+                            "captures": {
+                                "1": {
+                                    "name": "punctuation.definition.heading.alg"
+                                },
+                                "2": {
+                                    "name": "entity.name.section.alg"
+                                }
+                            }
+                        },
+                        {
+                            "match": "([#]{2})\\s+(.*)",
+                            "name": "heading.2.alg",
+                            "captures": {
+                                "1": {
+                                    "name": "punctuation.definition.heading.alg"
+                                },
+                                "2": {
+                                    "name": "entity.name.section.alg"
+                                }
+                            }
+                        },
+                        {
+                            "match": "([#]{1})\\s+(.*)",
+                            "name": "heading.1.alg",
+                            "captures": {
+                                "1": {
+                                    "name": "punctuation.definition.heading.alg"
+                                },
+                                "2": {
+                                    "name": "entity.name.section.alg"
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            "patterns": [
+
+            ]
+        }        
+    },
+    "scopeName": "source.alg"
+}
